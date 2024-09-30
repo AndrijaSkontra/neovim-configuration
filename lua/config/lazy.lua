@@ -27,6 +27,11 @@ require("lazy").setup({
     require("config.plugins.dashboard"),
     "tpope/vim-sleuth", -- INFO: auto tab space
     require("config.plugins.mini"),
+    require("config.plugins.markdown-viewer"),
+    require("config.plugins.todo-comments"),
+    require("config.plugins.harpoon"),
+    require("config.plugins.lualine"),
+    require("config.plugins.tailwind"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },

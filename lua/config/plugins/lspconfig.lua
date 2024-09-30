@@ -1,18 +1,19 @@
 return {
-  'neovim/nvim-lspconfig',
+  "neovim/nvim-lspconfig",
   dependencies = {
-    { 'williamboman/mason.nvim', config = true },
-    'williamboman/mason-lspconfig.nvim',
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    { "williamboman/mason.nvim", config = true },
+    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
 
-    { 'j-hui/fidget.nvim', opts = {} },
+    { "j-hui/fidget.nvim", opts = {} },
 
-    { 'folke/neodev.nvim', opts = {} },
+    { "folke/neodev.nvim", opts = {} },
   },
   config = function()
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+    capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
     local servers = {
+      elixirls = {},
       jsonls = {},
       css_variables = {},
       bashls = {},
@@ -25,33 +26,32 @@ return {
         settings = {
           Lua = {
             completion = {
-              callSnippet = 'Replace',
+              callSnippet = "Replace",
             },
-            diagnostics = { disable = { 'missing-fields' } },
+            diagnostics = { disable = { "missing-fields" } },
           },
         },
       },
     }
 
-    require('mason').setup()
+    require("mason").setup()
 
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-      'stylua',
-      'mdformat',
-      'prettierd',
+      "stylua",
+      "mdformat",
+      "prettierd",
     })
-    require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-    require('mason-lspconfig').setup {
+    require("mason-lspconfig").setup({
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
-          server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-          require('lspconfig')[server_name].setup(server)
+          server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+          require("lspconfig")[server_name].setup(server)
         end,
       },
-    }
+    })
   end,
 }
-

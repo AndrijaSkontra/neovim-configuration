@@ -15,9 +15,9 @@ return {
       "luadoc",
       "markdown",
       "markdown_inline",
-      "query",
-      "vim",
-      "vimdoc",
+      "typescript",
+      "toml",
+      "elixir",
     },
     auto_install = true,
     highlight = {
