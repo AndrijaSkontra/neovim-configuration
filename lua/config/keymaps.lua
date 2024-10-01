@@ -37,14 +37,14 @@ vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch curren
 vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 
 vim.keymap.set("n", "<leader>sn", function()
-	builtin.find_files({ cwd = vim.fn.stdpath("config") })
+  builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end, { desc = "[S]earch [N]eovim files" })
 
 vim.keymap.set("n", "<leader>/", function()
-	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-		winblend = 10,
-		previewer = false,
-	}))
+  builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+    winblend = 10,
+    previewer = false,
+  }))
 end, { desc = "[/] Fuzzily search in current buffer" })
 -- Telescope end
 
@@ -53,18 +53,12 @@ end, { desc = "[/] Fuzzily search in current buffer" })
 -- Pretty command line insted of regular end
 
 -- Neotree start
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>e",
-	":Neotree toggle current reveal_force_cwd<CR>",
-	{ noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 -- Neotree end
 
 -- Diagnostics start
-vim.keymap.set('n', '<leader>n', '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<CR>')
+vim.keymap.set("n", "<leader>n", '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<CR>')
 vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_action, { desc = "Code Action aka quickfix" })
 
 -- vim.keymap.set('n', '<leader>q', '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>')
 -- Diagnostics end
-
