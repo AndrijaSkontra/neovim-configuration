@@ -32,6 +32,8 @@ require("lazy").setup({
     require("config.plugins.harpoon"),
     require("config.plugins.lualine"),
     require("config.plugins.tailwind"),
+    require("config.plugins.autoclose-tags"),
+    require("config.plugins.autoclose-brackets"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
