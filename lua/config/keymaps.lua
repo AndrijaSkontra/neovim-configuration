@@ -62,3 +62,6 @@ vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_action, { desc = "Code Action 
 
 -- vim.keymap.set('n', '<leader>q', '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>')
 -- Diagnostics end
+
+-- clear highlight after pressing esc
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
