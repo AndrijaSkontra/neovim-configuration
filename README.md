@@ -1,5 +1,7 @@
 # Neovim
 
+![Basic](./neovim-example.png) 
+
 > [!CAUTION]
 >
 > This is a document for personal
