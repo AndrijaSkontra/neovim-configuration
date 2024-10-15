@@ -45,6 +45,7 @@
 ## Todo
 
 - [x] Make a cool looking cheatsheet
-- [ ] Add undotree
+- [x] Add undotree space + su
 - [ ] center screen after % jump
+- [ ] switch to oil or nerdtree
 

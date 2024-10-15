@@ -36,6 +36,7 @@ require("lazy").setup({
     require("config.plugins.autoclose-brackets"),
     require("config.plugins.multicursor"),
     require("config.plugins.noice"),
+    require("config.plugins.telescope-undo"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
