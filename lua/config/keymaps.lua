@@ -65,3 +65,7 @@ vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_action, { desc = "Code Action 
 
 -- clear highlight after pressing esc
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- center on % jump
+-- this blocks the default tag pair match, but we can still use that is visual mode
+vim.api.nvim_set_keymap("n", "%", "%zz", { noremap = true, silent = true })

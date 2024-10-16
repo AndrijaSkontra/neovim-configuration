@@ -72,6 +72,7 @@ return {
       tailwindcss = {},
       cssls = {},
       eslint = {},
+      prettier = {},
       lua_ls = {
         settings = {
           Lua = {
