@@ -4,4 +4,5 @@ return {
   "rebelot/kanagawa.nvim",
   "savq/melange-nvim",
   "folke/tokyonight.nvim",
+  "projekt0n/github-nvim-theme",
 }

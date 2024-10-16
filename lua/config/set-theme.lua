@@ -4,4 +4,4 @@ vim.opt.termguicolors = true
 -- vim.cmd.colorscheme("melange")
 
 -- Light mode theme
-vim.cmd.colorscheme("tokyonight-day")
+vim.cmd.colorscheme("github_light")
