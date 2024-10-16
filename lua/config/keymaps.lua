@@ -53,7 +53,7 @@ end, { desc = "[/] Fuzzily search in current buffer" })
 -- Pretty command line insted of regular end
 
 -- Neotree start
-vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 -- Neotree end
 
 -- Diagnostics start
@@ -69,3 +69,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- center on % jump
 -- this blocks the default tag pair match, but we can still use that is visual mode
 vim.api.nvim_set_keymap("n", "%", "%zz", { noremap = true, silent = true })
+
+-- oil
+vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
