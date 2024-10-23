@@ -25,6 +25,11 @@
 > - <leader>srt | Surround with custom tag |
 
 
+| Project files with Oil | Description |
+| -------------- | --------------- |
+| leader + e | open oil |
+| g. | show hidden files |
+
 | Useful snippets | Description |
 | -------------- | --------------- |
 | imn | import module |
