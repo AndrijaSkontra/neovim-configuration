@@ -16,6 +16,8 @@
 
 ![status line](./lualine.png) 
 
+---
+
 > [!CAUTION]
 >
 > This is a document for personal
