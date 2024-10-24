@@ -11,7 +11,7 @@ return {
         footer = {
           "",
           "      To master a new technology, you have to play with it.",
-          "      -Jordan Perterson",
+          "      -Jordan Peterson",
         },
         -- header = {
         --   "        ▄▄▄▄▄███████████████████▄▄▄▄▄     ",
