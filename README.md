@@ -25,24 +25,41 @@
 - [x] customize to your needs
 - [ ] easy learning process 😸
 
-## Tips and tricks
+## Remapped commands
 
-> [!NOTE]
->
-> - '*' -> to search for the word on cursor
-> - leader / -> search files
-> - leader ds -> all variables, functions... in document 
-> - leader ws -> all variables, functions... in workspace/project 
-> - scroll docs ctrl b and f in autocomplete
-> - <leader>sr :input symbol | Surround replace with symbol |
-> - <leader>sh :input symbol| Fing matching symbol |
-> - <leader>srt | Surround with custom tag |
+> [!IMPORTANT]
+> "leader" key is space, but I will mark it with "<l>" 
 
+| Navigation | Description |
+| --------------- | --------------- |
+| ctrl h/j/k/l | Move focused pane (left/up/down/right) |
+| alt h/j/k/l | Fast navigation in text |
+
+| Quick fix navigation | Description |
+| --------------- | --------------- |
+| <l> n | Goto next error |
+| <l> q | Show list of possible fixes |
 
 | Project files with Oil | Description |
 | -------------- | --------------- |
 | leader + e | open oil |
 | g. | show hidden files |
+
+> [!NOTE]
+> If you don't like these remaps please change them as you see fit.
+> For all remaps check **/lua/keymaps.lua**
+
+## Useful commands
+
+| Search Shortcuts | Mode | Description |
+| --------------- | --------------- | --------------- |
+| * | Normal | Search the word on cursor |
+| <l> / | Normal | Fzf in current buffer |
+| <l> ds | Normal | Search for all variables, functions, class names |
+| <l> ws | Normal | Just like <l> ds but in whole project |
+| <l> sr | Normal | Surround replace with symbol |
+| ctrl b / ctrl f | Documentation on K press | Scroll up and down |
+| <l> srt | Normal | Surround with custom tag |
 
 | Useful snippets | Description |
 | -------------- | --------------- |
