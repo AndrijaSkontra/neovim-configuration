@@ -65,7 +65,7 @@ return {
     local servers = {
       elixirls = {},
       jsonls = {},
-      css_variables = {},
+      -- css_variables = {},
       bashls = {},
       ts_ls = {},
       html = {},

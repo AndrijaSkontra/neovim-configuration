@@ -1,6 +1,20 @@
 # Neovim
 
-![Basic](./neovim-example.png) 
+## Flow:
+
+![Basic](./flow.png) 
+
+---
+
+## Dashboard:
+
+![dashboard](./dashboard.png) 
+
+---
+
+## Lua line:
+
+![status line](./lualine.png) 
 
 > [!CAUTION]
 >
