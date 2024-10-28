@@ -73,3 +73,9 @@ vim.api.nvim_set_keymap("n", "%", "%zz", { noremap = true, silent = true })
 
 -- oil
 vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- jump to previous buffer
+vim.keymap.set("n", "<C-p>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
+
+-- jump to next buffer
+vim.keymap.set("n", "<C-n>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })

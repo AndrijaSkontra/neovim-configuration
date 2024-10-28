@@ -39,6 +39,7 @@ require("lazy").setup({
     -- plugin below is used for notifications, but has a lot of problems
     -- require("config.plugins.noice"),
     require("config.plugins.telescope-undo"),
+    -- require("config.plugins.bufferline-tabs"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
