@@ -16,6 +16,16 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+-- Makes sure that vim help file will take the whole screen
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "help",
+  callback = function()
+    vim.bo.readonly = true
+    vim.cmd("only")
+  end,
+  group = vim.api.nvim_create_augroup("vimdoc_autocmd", { clear = true }),
+})
+
 -- -- Tailwind setup to sort on save
 -- local tailwind_filetypes = {
 --   "javascriptreact",

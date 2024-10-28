@@ -17,6 +17,7 @@ return {
       "toml",
       "elixir",
       "vim",
+      "vimdoc",
       "regex",
       "markdown",
       "markdown_inline",
