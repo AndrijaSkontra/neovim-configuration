@@ -10,5 +10,5 @@ vim.opt.termguicolors = true
 -- vim.cmd.colorscheme("github_light")
 
 -- Rose pine dark
-vim.cmd.colorscheme("rose-pine-moon")
--- vim.cmd.colorscheme("rose-pine-main")
+-- vim.cmd.colorscheme("rose-pine-moon")
+vim.cmd.colorscheme("rose-pine-main")

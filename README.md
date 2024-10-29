@@ -89,4 +89,6 @@
 - [ ] set up rest.nvim (for rest api testing)
 - [ ] test javascript lsp auto import and errors (is this a js problem?)
 - [ ] make a cool auto command for commenting jsx files (or keymap?), can use surround.nvim
+- [ ] better macro plugin
+- [ ] plugin for visual information of previous and next buffers
 
