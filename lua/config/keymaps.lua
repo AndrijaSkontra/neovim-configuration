@@ -27,7 +27,7 @@ vim.api.nvim_set_keymap("v", "<leader>p", '"ap', { noremap = true })
 
 -- Telescope start
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>ff", "<CMD>Telescope smart_open<CR>", {})
 vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })

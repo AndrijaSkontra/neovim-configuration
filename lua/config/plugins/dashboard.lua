@@ -54,7 +54,7 @@ return {
             icon_hl = "@variable",
             desc = "Files",
             group = "Label",
-            action = "Telescope find_files",
+            action = "Telescope smart_open",
             key = "f",
           },
           {

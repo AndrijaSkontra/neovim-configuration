@@ -40,6 +40,7 @@ require("lazy").setup({
     -- require("config.plugins.noice"),
     require("config.plugins.telescope-undo"),
     -- require("config.plugins.bufferline-tabs"),
+    require("config.plugins.smart-open-telescope"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
