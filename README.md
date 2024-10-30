@@ -86,9 +86,7 @@
 - [x] Add undotree space + su
 - [x] center screen after % jump
 - [x] switch to oil or nerdtree
-- [ ] set up rest.nvim (for rest api testing)
-- [ ] test javascript lsp auto import and errors (is this a js problem?)
-- [ ] make a cool auto command for commenting jsx files (or keymap?), can use surround.nvim
-- [ ] better macro plugin
+- [x] better macro plugin => first macro saved <l>cc to comment jsx files
 - [ ] plugin for visual information of previous and next buffers
+- [ ] set up rest.nvim (for rest api testing)
 

@@ -1,14 +1,21 @@
 vim.opt.termguicolors = true
 
--- This one is great for elixir dev / dark mode
--- vim.cmd.colorscheme("melange")
-
--- dark mode
--- vim.cmd.colorscheme("tokyonight")
-
--- Light mode theme
--- vim.cmd.colorscheme("github_light")
-
--- Rose pine dark
--- vim.cmd.colorscheme("rose-pine-moon")
-vim.cmd.colorscheme("rose-pine-main")
+-- Minimal config
+require("themery").setup({
+  themes = {
+    "rose-pine-moon",
+    "rose-pine-main",
+    "github_light",
+    "tokyonight",
+    "melange",
+    "github_dark",
+    "kanagawa-wave",
+    "kanagawa-dragon",
+    "kanagawa-lotus",
+    "tokyonight-night",
+    "tokyonight-storm",
+    "tokyonight-day",
+    "tokyonight-moon",
+  }, -- Your list of installed colorschemes.
+  livePreview = true, -- Apply theme while picking. Default to true.
+})

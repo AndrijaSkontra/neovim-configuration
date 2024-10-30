@@ -79,3 +79,7 @@ vim.keymap.set("n", "<C-p>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" }
 
 -- jump to next buffer
 vim.keymap.set("n", "<C-n>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
+
+-- theme switcher
+vim.keymap.set("n", "<leader>th", "<CMD>Themery<CR>", { desc = "Switch theme" })
+vim.keymap.set("n", "<leader>cc", "_i{/*<Space><Esc>$a<Space>*/}<Esc>", { desc = "Comment JSX" })
