@@ -43,3 +43,5 @@ end)
 require("oil").setup()
 
 require("tailwind-tools").setup({})
+
+require("bufferline").setup({})
