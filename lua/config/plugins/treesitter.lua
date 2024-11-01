@@ -16,6 +16,7 @@ return {
       "typescript",
       "toml",
       "elixir",
+      "eex",
       "vim",
       "vimdoc",
       "regex",

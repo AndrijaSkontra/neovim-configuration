@@ -61,3 +61,5 @@ vim.diagnostic.config({
     end,
   },
 })
+
+vim.opt.termguicolors = true

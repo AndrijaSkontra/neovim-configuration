@@ -1,8 +1,8 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    { "williamboman/mason.nvim", config = true },
-    "williamboman/mason-lspconfig.nvim",
+    { "williamboman/mason.nvim", config = true, opts = {} },
+    { "williamboman/mason-lspconfig.nvim", opts = {} },
     "WhoIsSethDaniel/mason-tool-installer.nvim",
 
     { "j-hui/fidget.nvim", opts = {} },
@@ -71,6 +71,7 @@ return {
       html = {},
       tailwindcss = {},
       cssls = {},
+      yamlls = {},
       eslint = {},
       prettier = {},
       lua_ls = {
@@ -79,7 +80,7 @@ return {
             completion = {
               callSnippet = "Replace",
             },
-            diagnostics = { disable = { "missing-fields" } },
+            diagnostics = { disable = { "missing-fields" }, globals = { "vim" } },
           },
         },
       },
