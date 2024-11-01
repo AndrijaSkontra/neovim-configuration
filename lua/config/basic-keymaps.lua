@@ -3,7 +3,6 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.api.nvim_set_keymap("n", "<A-j>", "<C-d>zz", {})
 vim.api.nvim_set_keymap("n", "<A-k>", "<C-u>zz", {})
 vim.api.nvim_set_keymap("v", "<A-j>", "<C-d>zz", {})
@@ -12,9 +11,9 @@ vim.api.nvim_set_keymap("n", "<A-h>", "_", {})
 vim.api.nvim_set_keymap("n", "<A-l>", "$", {})
 vim.api.nvim_set_keymap("v", "<A-h>", "_", {})
 vim.api.nvim_set_keymap("v", "<A-l>", "$", {})
--- Navigation end
+-- Navigation between panes/windows
 
--- COPY PASTE start
+-- COPY PASTE
 vim.api.nvim_set_keymap("v", "<C-c>", '"+y', {})
 vim.api.nvim_set_keymap("n", "d", '"ad', { noremap = true })
 vim.api.nvim_set_keymap("v", "d", '"ad', { noremap = true })
@@ -23,13 +22,11 @@ vim.api.nvim_set_keymap("n", "x", '"bx', { noremap = true })
 vim.api.nvim_set_keymap("n", "c", '"_c', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>p", '"ap', { noremap = true })
 vim.api.nvim_set_keymap("v", "<leader>p", '"ap', { noremap = true })
--- COPY PASTE end
---
--- Diagnostics start
-vim.keymap.set("n", "<leader>n", '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<CR>')
-vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_action, { desc = "Code Action aka quickfix" })
+-- COPY PASTE
 
--- vim.keymap.set('n', '<leader>q', '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>')
+-- Diagnostics
+vim.keymap.set("n", "<leader>n", '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<cr>')
+-- vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_actions({}), { desc = "Code Action aka quickfix" })
 -- Diagnostics end
 
 -- clear highlight after pressing esc
