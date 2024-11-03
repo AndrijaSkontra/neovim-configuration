@@ -43,7 +43,6 @@ vim.opt.scrolloff = 12
 vim.opt.hlsearch = true
 
 vim.opt.autowriteall = true
--- vim.opt.colorcolumn = '80'
 
 -- use float window instead of inline diagnostic
 vim.diagnostic.config({
@@ -63,3 +62,5 @@ vim.diagnostic.config({
 })
 
 vim.opt.termguicolors = true
+
+vim.opt.colorcolumn = "80"

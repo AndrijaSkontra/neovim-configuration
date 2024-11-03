@@ -1,3 +1,4 @@
+-- don't pay attention to this, it just needs to exist here for lazy to work
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -13,6 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+-- don't pay attention to this, it just needs to exist here for lazy to work
 
 require("lazy").setup({
   spec = {
@@ -36,15 +38,12 @@ require("lazy").setup({
     require("config.plugins.autoclose-tags"),
     require("config.plugins.autoclose-brackets"),
     require("config.plugins.multicursor"),
-    -- plugin below is used for notifications, but has a lot of problems
     require("config.plugins.noice"),
     require("config.plugins.telescope-undo"),
     require("config.plugins.bufferline-tabs"),
     require("config.plugins.smart-open-telescope"),
     require("config.plugins.themery-theme-switcher"),
     require("config.plugins.nvim-macros"),
-    -- require("config.plugins.trouble"),
-    -- require("config.plugins.fine-cmd-line"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },

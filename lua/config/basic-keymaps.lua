@@ -26,25 +26,20 @@ vim.api.nvim_set_keymap("v", "<leader>p", '"ap', { noremap = true })
 
 -- Diagnostics
 vim.keymap.set("n", "<leader>n", '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<cr>')
--- vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_actions({}), { desc = "Code Action aka quickfix" })
--- Diagnostics end
+vim.api.nvim_set_keymap("n", "<leader>q", '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>', {})
+-- Diagnostics
 
 -- clear highlight after pressing esc
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- center on % jump
--- this blocks the default tag pair match, but we can still use that is visual mode
+-- center on % jump, this blocks the default tag pair match, but we can still use that is visual mode
 vim.api.nvim_set_keymap("n", "%", "%zz", { noremap = true, silent = true })
 
--- oil
-vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
 -- jump to previous buffer
-vim.keymap.set("n", "<C-p>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
+vim.keymap.set("n", "<C-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
 
 -- jump to next buffer
-vim.keymap.set("n", "<C-n>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
+vim.keymap.set("n", "<C-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
 
--- theme switcher
--- vim.keymap.set("n", "<leader>tt", "<CMD>Themery<CR>", { desc = "Switch theme" })
+-- comment jsx or tsx
 vim.keymap.set("n", "<leader>cc", "_i{/*<Space><Esc>$a<Space>*/}<Esc>", { desc = "Comment JSX" })
