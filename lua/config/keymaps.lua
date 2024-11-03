@@ -27,9 +27,8 @@ vim.api.nvim_set_keymap("v", "<leader>p", '"ap', { noremap = true })
 --
 -- Diagnostics start
 vim.keymap.set("n", "<leader>n", '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<CR>')
-vim.keymap.set("n", "<leader>q", vim.lsp.buf.code_action, { desc = "Code Action aka quickfix" })
+-- vim.keymap.set("n", "<leader>q", "<cmd>lua vim.lsp.buf.code_action<cr>", { desc = "Code Action aka quickfix" })
 
--- vim.keymap.set('n', '<leader>q', '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>')
 -- Diagnostics end
 
 -- clear highlight after pressing esc
