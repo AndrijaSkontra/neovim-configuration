@@ -18,7 +18,7 @@ return {
         end
         map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
         map("gh", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-        map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+        map("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
         map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
         map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
         -- map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
