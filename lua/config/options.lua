@@ -63,4 +63,4 @@ vim.diagnostic.config({
 
 vim.opt.termguicolors = true
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "95"

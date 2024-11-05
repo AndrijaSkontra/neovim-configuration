@@ -18,10 +18,7 @@ return {
   },
   config = function()
     vim.api.nvim_create_autocmd("LspAttach", {
-      group = vim.api.nvim_create_augroup(
-        "kickstart-lsp-attach",
-        { clear = true }
-      ),
+      group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
       callback = function(event)
         local map = function(keys, func, desc)
           vim.keymap.set("n", keys, func, {
@@ -29,21 +26,9 @@ return {
             desc = "LSP: " .. desc,
           })
         end
-        map(
-          "gd",
-          require("telescope.builtin").lsp_definitions,
-          "[G]oto [D]efinition"
-        )
-        map(
-          "gh",
-          require("telescope.builtin").lsp_references,
-          "[G]oto [R]eferences"
-        )
-        map(
-          "gi",
-          require("telescope.builtin").lsp_implementations,
-          "[G]oto [I]mplementation"
-        )
+        map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+        map("gh", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+        map("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
         map(
           "<leader>D",
           require("telescope.builtin").lsp_type_definitions,
@@ -58,10 +43,8 @@ return {
         -- word under your cursor when your cursor rests there for a little while.
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         if client and client.server_capabilities.documentHighlightProvider then
-          local highlight_augroup = vim.api.nvim_create_augroup(
-            "kickstart-lsp-highlight",
-            { clear = false }
-          )
+          local highlight_augroup =
+            vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
           vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             buffer = event.buf,
             group = highlight_augroup,
@@ -75,10 +58,7 @@ return {
           })
 
           vim.api.nvim_create_autocmd("LspDetach", {
-            group = vim.api.nvim_create_augroup(
-              "kickstart-lsp-detach",
-              { clear = true }
-            ),
+            group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
             callback = function(event2)
               vim.lsp.buf.clear_references()
               vim.api.nvim_clear_autocmds({
@@ -89,11 +69,7 @@ return {
           })
         end
 
-        if
-          client
-          and client.server_capabilities.inlayHintProvider
-          and vim.lsp.inlay_hint
-        then
+        if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
           map("<leader>th", function()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
             print("toggle inlay hints")
@@ -151,12 +127,8 @@ return {
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
-          server.capabilities = vim.tbl_deep_extend(
-            "force",
-            {},
-            capabilities,
-            server.capabilities or {}
-          )
+          server.capabilities =
+            vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
           require("lspconfig")[server_name].setup(server)
         end,
       },
@@ -175,9 +147,8 @@ return {
     }
 
     -- Set up the hover handler with the border
-    vim.lsp.handlers["textDocument/hover"] =
-      vim.lsp.with(vim.lsp.handlers.hover, {
-        border = border,
-      })
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      border = border,
+    })
   end,
 }

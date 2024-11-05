@@ -25,8 +25,17 @@ vim.api.nvim_set_keymap("v", "<leader>p", '"ap', { noremap = true })
 -- COPY PASTE
 
 -- Diagnostics
-vim.keymap.set("n", "<leader>n", '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<cr>')
-vim.api.nvim_set_keymap("n", "<leader>q", '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>', {})
+vim.keymap.set(
+  "n",
+  "<leader>n",
+  '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<cr>'
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>q",
+  '<cmd>lua vim.lsp.buf.code_action({ float = { border = "single" } })<CR>',
+  {}
+)
 -- Diagnostics
 
 -- clear highlight after pressing esc
@@ -42,4 +51,10 @@ vim.keymap.set("n", "<C-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" }
 vim.keymap.set("n", "<C-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
 
 -- comment jsx or tsx
-vim.keymap.set("n", "<leader>cc", "_i{/*<Space><Esc>$a<Space>*/}<Esc>", { desc = "Comment JSX" })
+vim.keymap.set(
+  "n",
+  "<leader>cc",
+  "_i{/*<Space><Esc>$a<Space>*/}<Esc>",
+  { desc = "Comment JSX" }
+)
+vim.keymap.set("n", "<leader>dc", "_xxxx$xxxx", { desc = "Comment JSX" })

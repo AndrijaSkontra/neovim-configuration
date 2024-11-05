@@ -12,6 +12,12 @@ return {
   },
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
+    {
+      "rcarriga/nvim-notify",
+      opts = {
+        max_width = 35,
+        render = "wrapped-compact",
+      },
+    },
   },
 }
