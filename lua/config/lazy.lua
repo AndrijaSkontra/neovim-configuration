@@ -51,6 +51,7 @@ require("lazy").setup({
     require("config.plugins.smart-open-telescope"),
     require("config.plugins.themery-theme-switcher"),
     require("config.plugins.nvim-macros"),
+    require("config.plugins.git"),
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
