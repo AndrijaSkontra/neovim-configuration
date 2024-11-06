@@ -1,3 +1,4 @@
+# Configure stylua formatter
 indent_type = "Spaces"
 column_width = 95 
 indent_width = 2

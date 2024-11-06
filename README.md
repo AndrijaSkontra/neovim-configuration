@@ -2,19 +2,19 @@
 
 ## Flow:
 
-![Basic](./flow.png) 
+![Basic](./repo-assets/flow.png) 
 
 ---
 
 ## Dashboard:
 
-![dashboard](./dashboard.png) 
+![dashboard](./repo-assets/dashboard.png) 
 
 ---
 
 ## Lua line:
 
-![status line](./lualine.png) 
+![status line](./repo-assets/lualine.png) 
 
 ---
 
