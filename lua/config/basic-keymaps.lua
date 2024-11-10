@@ -58,3 +58,6 @@ vim.keymap.set(
   { desc = "Comment JSX" }
 )
 vim.keymap.set("n", "<leader>dc", "_xxxx$xxxx", { desc = "Comment JSX" })
+
+-- copy whole file
+vim.api.nvim_set_keymap("n", "<leader>cc", "ggVGy", { noremap = true })
