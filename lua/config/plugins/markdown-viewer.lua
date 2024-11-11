@@ -11,4 +11,6 @@ return {
       desc = "Toggle between rendering markdown",
     },
   },
+  ft = "markdown",
+  lazy = false,
 }
