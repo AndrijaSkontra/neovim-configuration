@@ -92,5 +92,6 @@
 - [ ] vim.test => plugin for easier testing
 - [ ] add credo with nvim.lint (for elixir linter)
 - [ ] fix the bug where the documentation window is to big
+- [ ] visual mode comment jsx
 
 

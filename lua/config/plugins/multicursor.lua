@@ -49,7 +49,7 @@ return {
     set({ "n", "v" }, "<right>", mc.prevCursor)
 
     -- Delete the main cursor.
-    set({ "n", "v" }, "<leader>x", mc.deleteCursor)
+    set({ "n", "v" }, "<leader>xz", mc.deleteCursor)
 
     -- Add and remove cursors with control + left click.
     set("n", "<c-leftmouse>", mc.handleMouse)
@@ -60,15 +60,7 @@ return {
     -- Clone every cursor and disable the originals.
     set({ "n", "v" }, "<leader><c-q>", mc.duplicateCursors)
 
-    set("n", "<esc>", function()
-      if not mc.cursorsEnabled() then
-        mc.enableCursors()
-      elseif mc.hasCursors() then
-        mc.clearCursors()
-      else
-        -- Default <esc> handler.
-      end
-    end)
+    set("n", "<leader>xx", mc.clearCursors)
 
     -- Align cursor columns.
     set("v", "<leader>a", mc.alignCursors)
