@@ -87,7 +87,7 @@
 - [x] center screen after % jump
 - [x] switch to oil or nerdtree
 - [x] better macro plugin => first macro saved <l>cc to comment jsx files
-- [ ] plugin for visual information of previous and next buffers
+- [x] plugin for visual information of previous and next buffers (JABS) (leader b)
 - [ ] set up rest.nvim (for rest api testing)
 - [ ] vim.test => plugin for easier testing
 - [ ] add credo with nvim.lint (for elixir linter)

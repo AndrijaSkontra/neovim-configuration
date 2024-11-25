@@ -1,4 +1,4 @@
 local lualine = require("lualine")
 lualine.setup({
-  options = { theme = "codedark" }, --  INFO: SET THEME HERE
+  options = { theme = "gruvbox" }, --  INFO: SET THEME HERE
 })
