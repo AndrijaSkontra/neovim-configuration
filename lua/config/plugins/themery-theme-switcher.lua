@@ -17,6 +17,7 @@ return {
       "tokyonight-day",
       "tokyonight-moon",
       "gruvbox",
+      "vscode",
     },
   },
   keys = {

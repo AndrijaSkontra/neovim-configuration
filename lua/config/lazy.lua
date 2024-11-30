@@ -29,7 +29,7 @@ require("lazy").setup({
     require("config.plugins.telescope"),
     require("config.plugins.treesitter"),
     require("config.plugins.lspconfig"),
-    -- require("config.plugins.neo-tree"),
+    require("config.plugins.nvim-tree"),
     require("config.plugins.oil"),
     require("config.plugins.colorscheme"),
     require("config.plugins.autocomplete"),
