@@ -52,7 +52,7 @@ require("lazy").setup({
     require("config.plugins.themery-theme-switcher"),
     require("config.plugins.nvim-macros"),
     require("config.plugins.git"),
-    require("config.plugins.pretty-typescripts-errors"),
+    -- require("config.plugins.pretty-typescripts-errors"), this is deprecated
     require("config.plugins.buffer-jabs"),
   },
   install = { colorscheme = { "gruvbox" } },
