@@ -54,6 +54,7 @@ require("lazy").setup({
     require("config.plugins.git"),
     -- require("config.plugins.pretty-typescripts-errors"), this is deprecated
     require("config.plugins.buffer-jabs"),
+    require("config.plugins.dadbod"),
   },
   install = { colorscheme = { "gruvbox" } },
   checker = { enabled = true },
