@@ -34,7 +34,7 @@ require("lazy").setup({
     require("config.plugins.colorscheme"),
     require("config.plugins.autocomplete"),
     require("config.plugins.autoformat"),
-    require("config.plugins.dashboard"),
+    -- require("config.plugins.dashboard"),
     "tpope/vim-sleuth", -- INFO: auto tab space
     require("config.plugins.mini"),
     require("config.plugins.markdown-viewer"),
@@ -54,6 +54,7 @@ require("lazy").setup({
     require("config.plugins.git"),
     -- require("config.plugins.pretty-typescripts-errors"), this is deprecated
     require("config.plugins.buffer-jabs"),
+    require("config.plugins.snacks"),
   },
   install = { colorscheme = { "gruvbox" } },
   checker = { enabled = true },
