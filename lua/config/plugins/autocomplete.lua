@@ -94,11 +94,15 @@ return { -- Autocompletion
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       }),
+      -- sources = {
+      --   { name = "nvim_lsp" },
+      --   { name = "luasnip" },
+      --   { name = "path" },
+      -- },
       sources = {
-        { name = "nvim_lsp" },
-        { name = "luasnip" },
-        { name = "path" },
-        -- { name = 'codeium' },
+        { name = "nvim_lsp", max_item_count = 20 },
+        { name = "luasnip", max_item_count = 20 },
+        { name = "path", max_item_count = 20 },
       },
     })
   end,
