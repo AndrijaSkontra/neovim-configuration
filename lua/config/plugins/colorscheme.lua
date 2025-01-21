@@ -8,4 +8,11 @@ return {
   "projekt0n/github-nvim-theme",
   "rose-pine/neovim",
   "ellisonleao/gruvbox.nvim",
+  {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    opts = {
+      style = "warm", -- Set the style to "warm"
+    },
+  },
 }

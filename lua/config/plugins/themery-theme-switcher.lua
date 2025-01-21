@@ -18,6 +18,7 @@ return {
       "tokyonight-moon",
       "gruvbox",
       "vscode",
+      "onedark",
     },
   },
   keys = {
