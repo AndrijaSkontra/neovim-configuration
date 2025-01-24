@@ -89,7 +89,13 @@ return {
       jsonls = {},
       -- css_variables = {},
       bashls = {},
-      ts_ls = {},
+      ts_ls = {
+        init_options = {
+          preferences = {
+            importModuleSpecifierPreference = "non-relative",
+          },
+        },
+      },
       html = {},
       tailwindcss = {},
       cssls = {},
