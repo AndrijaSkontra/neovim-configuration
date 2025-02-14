@@ -64,3 +64,4 @@ vim.diagnostic.config({
 vim.opt.termguicolors = true
 
 vim.opt.colorcolumn = "95"
+vim.opt.swapfile = false

@@ -59,5 +59,5 @@ vim.api.nvim_set_keymap("n", "<leader>cf", "ggVGy", { noremap = true })
 
 vim.api.nvim_set_keymap("n", "ss", "<cmd>w<CR>", { noremap = true })
 
-vim.keymap.set("", ";", ":")
-vim.keymap.set("", ":", ";")
+-- vim.keymap.set("", ";", ":")
+-- vim.keymap.set("", ":", ";")
