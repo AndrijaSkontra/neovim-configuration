@@ -59,5 +59,20 @@ vim.api.nvim_set_keymap("n", "<leader>cf", "ggVGy", { noremap = true })
 
 vim.api.nvim_set_keymap("n", "ss", "<cmd>w<CR>", { noremap = true })
 
--- vim.keymap.set("", ";", ":")
--- vim.keymap.set("", ":", ";")
+function Git_log_visual_selection()
+  print("hello")
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
+  local file_name = vim.fn.expand("%")
+  local git_command =
+    string.format(":term git log -L%d,%d:%s", start_line, end_line, file_name)
+  vim.cmd(git_command)
+end
+
+-- Map the function to <leader>l in visual mode
+vim.api.nvim_set_keymap(
+  "v",
+  "<leader>l",
+  ":lua Git_log_visual_selection()<CR>",
+  { noremap = true, silent = true }
+)
