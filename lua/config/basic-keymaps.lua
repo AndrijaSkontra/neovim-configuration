@@ -69,7 +69,6 @@ function Git_log_visual_selection()
   vim.cmd(git_command)
 end
 
--- Map the function to <leader>l in visual mode
 vim.api.nvim_set_keymap(
   "v",
   "<leader>l",
