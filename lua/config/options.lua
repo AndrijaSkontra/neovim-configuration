@@ -72,6 +72,12 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
+vim.filetype.add({
+  extension = {
+    vto = "vento",
+  },
+})
+
 -- Define diagnostic signs
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do

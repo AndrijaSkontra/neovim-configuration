@@ -22,6 +22,7 @@ return {
       "regex",
       "markdown",
       "markdown_inline",
+      "vento",
     },
     auto_install = true,
     highlight = {
