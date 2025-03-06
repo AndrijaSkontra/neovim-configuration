@@ -109,6 +109,7 @@ return {
       cssls = {},
       yamlls = {},
       eslint = {},
+      basedpyright = {},
       prettier = {},
       lua_ls = {
         settings = {

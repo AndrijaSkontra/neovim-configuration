@@ -56,7 +56,7 @@ require("lazy").setup({
     require("config.plugins.buffer-jabs"),
     require("config.plugins.snacks"),
     require("config.plugins.dadbod"),
-    require("config.plugins.codeium"),
+    -- require("config.plugins.codeium"),
     require("config.plugins.auto-session"),
   },
   install = { colorscheme = { "gruvbox" } },
