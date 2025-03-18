@@ -109,7 +109,17 @@ return {
       cssls = {},
       yamlls = {},
       eslint = {},
-      basedpyright = {},
+      -- basedpyright = {},
+      prismals = {},
+      pyright = {
+        python = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = "openFilesOnly",
+            useLibraryCodeForTypes = true,
+          },
+        },
+      },
       prettier = {},
       lua_ls = {
         settings = {
