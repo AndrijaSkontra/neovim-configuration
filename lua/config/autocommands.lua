@@ -28,3 +28,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- to sort tailwind classes
 -- vim.cmd("TailwindSort")
+--
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.note",
+  callback = function()
+    vim.cmd("colorscheme kanagawa-lotus")
+  end,
+})

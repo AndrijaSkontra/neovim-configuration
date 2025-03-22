@@ -18,6 +18,7 @@ return {
       typescript = { "prettierd", "prettier", stop_after_first = true },
       ts = { "prettierd", "prettier", stop_after_first = true },
       tsx = { "prettierd", "prettier", stop_after_first = true },
+      python = { "ruff" },
     },
   },
 }

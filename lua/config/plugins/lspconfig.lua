@@ -87,7 +87,6 @@ return {
     local servers = {
       elixirls = {},
       jsonls = {},
-      -- css_variables = {},
       bashls = {},
       ts_ls = {
         root_dir = require("lspconfig").util.root_pattern({ "package.json", "tsconfig.json" }),
@@ -99,27 +98,13 @@ return {
           },
         },
       },
-      denols = {
-        root_dir = require("lspconfig").util.root_pattern({ "deno.json", "deno.jsonc" }),
-        single_file_support = false,
-        settings = {},
-      },
       html = {},
+      ruff = {},
       tailwindcss = {},
       cssls = {},
       yamlls = {},
       eslint = {},
-      -- basedpyright = {},
       prismals = {},
-      pyright = {
-        python = {
-          analysis = {
-            autoSearchPaths = true,
-            diagnosticMode = "openFilesOnly",
-            useLibraryCodeForTypes = true,
-          },
-        },
-      },
       prettier = {},
       lua_ls = {
         settings = {
