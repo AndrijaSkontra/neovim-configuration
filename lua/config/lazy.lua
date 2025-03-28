@@ -57,9 +57,9 @@ require("lazy").setup({
     require("config.plugins.snacks"),
     require("config.plugins.dadbod"),
     -- require("config.plugins.codeium"),
-    require("config.plugins.auto-session"),
+    -- require("config.plugins.auto-session"),
     require("config.plugins.quick-scope"),
+    require("config.plugins.better-marks"),
   },
-  install = { colorscheme = { "gruvbox" } },
   checker = { enabled = true },
 })

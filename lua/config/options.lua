@@ -44,40 +44,16 @@ vim.opt.hlsearch = true
 
 vim.opt.autowriteall = true
 
--- use float window instead of inline diagnostic
--- vim.diagnostic.config({
---   virtual_text = true,
---   signs = true,
---   float = {
---     border = "single",
---     format = function(diagnostic)
---       return string.format(
---         "%s (%s) [%s]",
---         diagnostic.message,
---         diagnostic.source,
---         diagnostic.code or diagnostic.user_data.lsp.code
---       )
---     end,
---   },
--- })
-
 vim.diagnostic.config({
-  virtual_text = {
-    spacing = 4,
-    prefix = "●", -- Could be '●', '▎', 'x'
-  },
   signs = true,
   underline = true,
   update_in_insert = false,
   severity_sort = true,
-})
 
--- Define diagnostic signs
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
+  virtual_lines = {
+    current_line = true,
+  },
+})
 
 vim.opt.termguicolors = true
 
