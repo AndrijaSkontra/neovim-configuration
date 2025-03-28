@@ -26,7 +26,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     require("config.plugins.zenmode"),
-    require("config.plugins.telescope"),
+    -- require("config.plugins.telescope"),
     require("config.plugins.treesitter"),
     require("config.plugins.lspconfig"),
     require("config.plugins.nvim-tree"),
@@ -48,7 +48,7 @@ require("lazy").setup({
     -- require("config.plugins.noice"),
     require("config.plugins.telescope-undo"),
     -- require("config.plugins.bufferline-tabs"),
-    require("config.plugins.smart-open-telescope"),
+    -- require("config.plugins.smart-open-telescope"),
     require("config.plugins.themery-theme-switcher"),
     require("config.plugins.nvim-macros"),
     require("config.plugins.git"),
@@ -59,7 +59,7 @@ require("lazy").setup({
     -- require("config.plugins.codeium"),
     -- require("config.plugins.auto-session"),
     require("config.plugins.quick-scope"),
-    require("config.plugins.better-marks"),
+    require("config.plugins.better-marks"), -- this is maybe not needed because of snacks!
   },
   checker = { enabled = true },
 })
