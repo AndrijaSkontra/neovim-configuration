@@ -63,3 +63,5 @@ vim.opt.swapfile = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
+
+vim.o.winborder = "single"
