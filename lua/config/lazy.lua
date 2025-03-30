@@ -61,6 +61,7 @@ require("lazy").setup({
     require("config.plugins.quick-scope"),
     require("config.plugins.better-marks"), -- this is maybe not needed because of snacks!
     require("config.plugins.blink"),
+    require("config.plugins.colors"),
   },
   checker = { enabled = true },
 })

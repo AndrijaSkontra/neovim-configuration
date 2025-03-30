@@ -23,3 +23,5 @@ vim.lsp.config("*", {
   capabilities = capabilities,
   root_markers = { ".git" },
 })
+
+require("nvim-highlight-colors").setup({})
