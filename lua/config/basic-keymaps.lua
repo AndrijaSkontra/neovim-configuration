@@ -4,8 +4,8 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
-vim.api.nvim_set_keymap("n", "<A-j>", "12jzz", {})
-vim.api.nvim_set_keymap("n", "<A-k>", "12kzz", {})
+vim.api.nvim_set_keymap("n", "<A-j>", "8jzz", {})
+vim.api.nvim_set_keymap("n", "<A-k>", "8kzz", {})
 vim.api.nvim_set_keymap("v", "<A-j>", "<C-d>zz", {})
 vim.api.nvim_set_keymap("v", "<A-k>", "<C-u>zz", {})
 vim.api.nvim_set_keymap("n", "<A-h>", "_", {})

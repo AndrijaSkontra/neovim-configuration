@@ -60,6 +60,7 @@ require("lazy").setup({
     -- require("config.plugins.auto-session"),
     require("config.plugins.quick-scope"),
     require("config.plugins.better-marks"), -- this is maybe not needed because of snacks!
+    require("config.plugins.blink"),
   },
   checker = { enabled = true },
 })
