@@ -106,6 +106,7 @@ return {
       eslint = {},
       prismals = {},
       prettier = {},
+      clangd = {},
       lua_ls = {
         settings = {
           Lua = {
