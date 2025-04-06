@@ -50,9 +50,9 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 
-  virtual_lines = {
-    current_line = true,
-  },
+  -- virtual_lines = {
+  --   current_line = true,
+  -- },
 })
 
 vim.opt.termguicolors = true
