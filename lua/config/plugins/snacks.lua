@@ -270,7 +270,7 @@ return {
       function()
         Snacks.picker.icons()
       end,
-      desc = "Icons",
+      desc = "Icons emotes emojis",
     },
     {
       "<leader>sj",

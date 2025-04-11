@@ -75,3 +75,10 @@ vim.api.nvim_set_keymap(
   ":lua Git_log_visual_selection()<CR>",
   { noremap = true, silent = true }
 )
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>rc", -- Leader key + rc (for remove comments)
+  ":%s/\\/\\/.*$//g<CR>", -- Execute the substitution command
+  { noremap = true, silent = true, desc = "Remove // comments" }
+)
