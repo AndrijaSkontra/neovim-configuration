@@ -20,17 +20,17 @@ return {
     require("telescope").load_extension("ui-select")
 
     vim.api.nvim_set_keymap("n", "<leader>tt", "<CMD>Themery<CR>", { desc = "Change theme" })
-    vim.api.nvim_set_keymap(
-      "n",
-      "<leader>ff",
-      "<CMD>Telescope smart_open<CR>",
-      { desc = "Find file" }
-    )
-    vim.api.nvim_set_keymap("n", "<leader>sg", "<CMD>Telescope live_grep<CR>", {})
+    -- vim.api.nvim_set_keymap(
+    --   "n",
+    --   "<leader>ff",
+    --   "<CMD>Telescope smart_open<CR>",
+    --   { desc = "Find file" }
+    -- )
+    -- vim.api.nvim_set_keymap("n", "<leader>sg", "<CMD>Telescope live_grep<CR>", {})
     vim.api.nvim_set_keymap("n", "<leader>sk", "<CMD>Telescope keymaps<CR>", {})
     vim.api.nvim_set_keymap("n", "<leader>s.", "<CMD>Telescope oldfiles<CR>", {})
     vim.api.nvim_set_keymap("n", "<leader><leader>", "<CMD>Telescope buffers<CR>", {})
-    vim.api.nvim_set_keymap("n", "<leader>sr", "<CMD>Telescope resume<CR>", {})
+    -- vim.api.nvim_set_keymap("n", "<leader>sr", "<CMD>Telescope resume<CR>", {})
     vim.api.nvim_set_keymap("n", "<leader>sw", "<CMD>Telescope grep_string<CR>", {})
     vim.api.nvim_set_keymap("n", "<leader>sh", "<CMD>Telescope help_tags<CR>", {})
     vim.api.nvim_set_keymap("n", "<leader>sd", "<CMD>Telescope diagnostics<CR>", {})
