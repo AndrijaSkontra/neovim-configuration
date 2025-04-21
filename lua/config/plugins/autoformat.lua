@@ -19,6 +19,7 @@ return {
       ts = { "prettierd", "prettier", stop_after_first = true },
       tsx = { "prettierd", "prettier", stop_after_first = true },
       python = { "ruff" },
+      c = { "clang-format" },
     },
   },
 }
