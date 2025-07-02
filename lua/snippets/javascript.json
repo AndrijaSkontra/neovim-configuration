@@ -1,0 +1,8 @@
+{
+	"testing snippet for javascript": {
+		"prefix": "testingsnippetforjavascript",
+		"body": [
+			"console.log(\"batman\");"
+		]
+	}
+}

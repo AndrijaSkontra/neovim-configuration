@@ -61,6 +61,8 @@ require("lazy").setup({
     require("config.plugins.quick-scope"),
     require("config.plugins.better-marks"), -- this is maybe not needed because of snacks!
     require("config.plugins.git-fugitive"),
+    require("config.plugins.supermaven"),
+    require("config.plugins.snippets-creation-plugin"),
   },
   checker = { enabled = true },
 })

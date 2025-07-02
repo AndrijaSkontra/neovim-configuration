@@ -209,13 +209,13 @@ return {
       end,
       desc = "Search History",
     },
-    {
-      "<leader>sa",
-      function()
-        Snacks.picker.autocmds()
-      end,
-      desc = "Autocmds",
-    },
+    -- {
+    --   "<leader>sx",
+    --   function()
+    --     Snacks.picker.autocmds()
+    --   end,
+    --   desc = "Autocmds",
+    -- },
     {
       "<leader>sb",
       function()

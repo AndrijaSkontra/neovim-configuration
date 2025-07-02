@@ -75,9 +75,10 @@
 | C-wq | quit a window |
 | C-wx | switch windows |
 
+
 | Git keymaps | Description |
 | -------------- | --------------- |
-| leader hD | git diff from last commit in this file |
+| leader gd | git diff from last commit in this file |
 | leader hb | git blame [!WARNING]  might change |
 
 ## Todo
