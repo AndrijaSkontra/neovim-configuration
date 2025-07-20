@@ -82,3 +82,46 @@ vim.api.nvim_set_keymap(
   ":%s/\\/\\/.*$//g<CR>", -- Execute the substitution command
   { noremap = true, silent = true, desc = "Remove // comments" }
 )
+
+-- Function to run command from .vimsetup file in a vertical split
+local function run_project_command()
+  -- Check if .vimsetup file exists
+  local command_file = ".command"
+  if vim.fn.filereadable(command_file) == 0 then
+    print("No .command file found in current directory")
+    return
+  end
+
+  -- Read the command from .vimsetup file
+  local file = io.open(command_file, "r")
+  if not file then
+    print("Could not open .command file")
+    return
+  end
+
+  local command = file:read("*line") -- Read first line
+  file:close()
+
+  -- Trim whitespace
+  command = command:match("^%s*(.-)%s*$")
+
+  if command == "" then
+    print(".command file is empty")
+    return
+  end
+
+  -- Create a vertical split
+  vim.cmd("vsplit")
+
+  -- Move to the new split (right window)
+  vim.cmd("wincmd l")
+
+  -- Open a terminal and run the command
+  vim.cmd("terminal " .. command)
+end
+
+-- Create the keymap
+vim.keymap.set("n", "<leader>!", run_project_command, {
+  desc = "Run command from .vimsetup file in vertical split",
+  silent = true,
+})
