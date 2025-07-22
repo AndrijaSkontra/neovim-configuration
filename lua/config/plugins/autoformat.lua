@@ -9,7 +9,7 @@ return {
     },
     formatters_by_ft = {
       lua = { "stylua" },
-      -- elixir = { "mix", stop_after_first = true },
+      elixir = { "mix", stop_after_first = true },
       javascript = { "prettierd", "prettier", stop_after_first = true },
       javascriptreact = { "prettierd", "prettier", stop_after_first = true },
       html = { "prettierd", "prettier", stop_after_first = true },

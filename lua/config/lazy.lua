@@ -63,6 +63,7 @@ require("lazy").setup({
     require("config.plugins.git-fugitive"),
     -- require("config.plugins.supermaven"),
     require("config.plugins.snippets-creation-plugin"),
+    require("config.plugins.elixir-tools"),
   },
   checker = { enabled = true },
 })
