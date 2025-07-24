@@ -83,16 +83,19 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true, desc = "Remove // comments" }
 )
 
--- Function to run command from .vimsetup file in a vertical split
+-- Variable to track the command pane
+local command_pane_bufnr = nil
+local command_pane_winid = nil
+
 local function run_project_command()
-  -- Check if .vimsetup file exists
+  -- Check if .command file exists
   local command_file = ".command"
   if vim.fn.filereadable(command_file) == 0 then
     print("No .command file found in current directory")
     return
   end
 
-  -- Read the command from .vimsetup file
+  -- Read the command from .command file
   local file = io.open(command_file, "r")
   if not file then
     print("Could not open .command file")
@@ -110,18 +113,44 @@ local function run_project_command()
     return
   end
 
+  -- Check if command pane exists and is valid
+  if command_pane_winid and vim.api.nvim_win_is_valid(command_pane_winid) then
+    -- Close the existing pane
+    vim.api.nvim_win_close(command_pane_winid, false)
+    command_pane_winid = nil
+    command_pane_bufnr = nil
+  end
+
   -- Create a vertical split
   vim.cmd("vsplit")
 
   -- Move to the new split (right window)
   vim.cmd("wincmd l")
 
+  -- Store the window ID before opening terminal
+  command_pane_winid = vim.api.nvim_get_current_win()
+
   -- Open a terminal and run the command
   vim.cmd("terminal " .. command)
+
+  -- Store the buffer number
+  command_pane_bufnr = vim.api.nvim_get_current_buf()
+
+  -- Set up an autocmd to clear our tracking variables when the window is closed
+  vim.api.nvim_create_autocmd("WinClosed", {
+    pattern = tostring(command_pane_winid),
+    callback = function()
+      if command_pane_winid == tonumber(vim.fn.expand("<amatch>")) then
+        command_pane_winid = nil
+        command_pane_bufnr = nil
+      end
+    end,
+    once = true,
+  })
 end
 
 -- Create the keymap
 vim.keymap.set("n", "<leader>!", run_project_command, {
-  desc = "Run command from .vimsetup file in vertical split",
+  desc = "Toggle command pane from .command file in vertical split",
   silent = true,
 })
