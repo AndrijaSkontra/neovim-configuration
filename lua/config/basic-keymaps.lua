@@ -88,6 +88,8 @@ local command_pane_bufnr = nil
 local command_pane_winid = nil
 
 local function run_project_command()
+  -- first save the file
+  vim.cmd("w")
   -- Check if .command file exists
   local command_file = ".command"
   if vim.fn.filereadable(command_file) == 0 then
