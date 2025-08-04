@@ -85,7 +85,7 @@ return {
       require("cmp_nvim_lsp").default_capabilities()
     )
     local servers = {
-      -- elixirls = {},
+      elixirls = {},
       jsonls = {},
       clangd = {},
       bashls = {},
