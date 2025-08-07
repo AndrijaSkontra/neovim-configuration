@@ -1,3 +1,8 @@
+vim.keymap.set("i", "<C-E>", "<C-X><C-E><C-X><C-E>")
+vim.keymap.set("i", "<C-Y>", "<C-X><C-Y><C-X><C-Y>")
+vim.keymap.set("n", "<C-E>", "<C-E><C-E>")
+vim.keymap.set("n", "<C-Y>", "<C-Y><C-Y>")
+
 -- Navigation between panes/windows
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
